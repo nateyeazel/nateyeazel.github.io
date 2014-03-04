@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>uHired Student Job Search</title>
+
+	<link rel="stylesheet" href="uhired.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Droid+Sans:regular,italic,bold,bolditalic"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:regular,italic,bold,bolditalic"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:regular,italic,bold,bolditalic"/>
+
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="jquery.screwdefaultbuttonsV2.min.js" ></script>
+	<script src="uhired.js"></script>
+</head>
+
+<body onload="document.registereduser.username.focus()">
+
+	<a href="uhired.html"><div class ="logo">UHired</div></a>
+
+	<div class = "logout">Thanks for choosing uHired!
+		<a href="uhired.html"><div class="logoutbutton">Log out</div></a></div>
+
+
+
+		<!--=============Filters section=============-->
+		<div class="filters">
+			<div class="filterhead">Manage Job Listings</div>
+			<div><div class="category">Active Listings (0)</div>
+
+		</div><br>
+
+		<div><div class="category">Inactive Listings (0)</div>
+
+	</div><br>
+
+	<div><div class="category">View Applicants (0)</div>
+
+</div><br>
+</div>
+
+<!--=============Navigation bar section=============-->
+<div id="header">
+	<div id="navigation">
+		<ul>
+			<a href="loggedin.html"><li>Find Jobs</li></a>
+			<a><li>Review Jobs</li></a>
+
+			<a><li class="selected">Post Jobs</li></a>
+			<a><li>Ask a Question</li></a>
+		</ul>
+	</div>
+</div>
+
+
+<!--=============Posting Job section=============-->
+<div class="addposting">
+	<div class="title">New Job posting</div>
+	<table alight="center" cellpadding="5" cellspacing="5">
+		<tr>
+			<td colspan="2" class="Title" align="center">Post a job</td>
+		</tr>
+		<tr>
+			<td class="label">Job Title:</td>
+			<td align="left">
+				<input id="Field1" type="text" size="40"/></td>
+			</tr>
+
+			<tr>
+				<td class="label">Description:</td>
+				<td align="center">
+					<textarea id="Field2" type="text" rows="10" cols = "60"/></textarea></td>
+				</tr>
+				<tr>
+					<td class="label">Pay:</td>
+					<td align="left">
+						<input id="Field3" type="text" size="40"/></td>
+						<td align="left" >$/hr</td>
+					</tr>
+
+					<tr>
+						<td class="label">Part of campus:</td>
+						<td align="left">
+							<input id="Field4" type="text" size="40"/></td>
+							<td class="label" align="left">Distance From Campus:</td>
+							<td align ="left">
+								<select>
+									<option> < 1/2 Mile </option>
+									<option>1/2 Mile - 1 Mile </option>
+									<option>1 Mile - 2 Miles </option>
+									<option> > 2 Miles </option>
+
+								</select>
+							</td>
+
+						</tr>
+						<tr>
+							<td class="label">Job Type:</td>
+							<td>
+								<select>
+									<option> Workstudy</option>
+									<option> Non-Workstudy </option>
+								</select>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="label">Industry:</td>
+							<td align="left">
+								<select>
+									<option>Academic/Research </option>
+									<option>Administrative/Clerical </option>
+									<option>Food Service </option>
+									<option>Information Technology </option>
+									<option>Other </option>
+								</select>
+							</td>
+						</tr>
+
+						<tr>
+							<td align="left">
+								<input type = "checkbox" >Flexible Hours<br> </td>
+								<td>
+									<input type = "checkbox">Hires International Students<br>
+
+									<input type = "checkbox">Summer Employment Available<br>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<!--=============Registration box remains hidden until these are changed=============-->
+					<div id="fade" class="overlay"></div>
+
+				</body>
+
+				</html>

@@ -17,17 +17,21 @@
 	<script src="uhired.js"></script>
 </head>
 
-<body>
+<body onload="document.registereduser.username.focus()">
 
 	<a href="uhired.html"><div class ="logo">UHired</div></a>
 
-<!--=============Log In or Register Option at top=============-->
 	<div class = "login">
-
-		<a href="javascript:void(0)" onclick="createlightboxregister()"><div class="topbutton" id="reg">Register</div></a>
-		<a href="login.html"><div class="topbutton2" id="login">Log In</div></a>
-
+    	<form name = "registereduser">
+    		<label for="user_username">Username</label><br>
+     			<input type="text" autofocus="autofocus" id="user_username" name="username" size="30"/><br><br>
+     		<label for="user_password">Password</label><br>
+     			<input type="password" autofocus="autofocus" id="user_password" name="password" size="30" />
+		</form>
+		<a href="javascript:void(0)" onclick = "createlightboxregister()"><div class="text" class="last">&laquo; Not registered?</div></a>
+		<a href="loggedin.html"><div class="loginbutton">Log in</div></a>
 	</div>
+
 
 <!--=============Pop up Registration Box when 'Register' is selected=============-->
 	<div id="lightreg" class="popupregcontent">
@@ -168,6 +172,31 @@
 
 	</div>
 
+<!--=============Pop up Login Box when 'Post' is selected=============-->
+	<div id="lightlogin" class="popuplogincontent">
+		<a href="javascript:void(0)" onclick = "closelightbox()" style="float:right">
+			<img src="images/close.png" alt=""/></a>
+
+		<table alight="center" cellpadding="5" cellspacing="5">
+			<tr>
+				<td colspan="2" class="Title" align="center">Log in to your account</td>
+			</tr>
+			<tr>
+				<td class="label">Username:</td>
+				<td align="center">
+					<input id="Field1" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Password:</td>
+				<td align="center">
+					<input id="Field2" type="password" size="40"/></td>
+			</tr>
+
+		</table>
+		<a href="loggedin.html" style="text-decoration: none"><div class="regbutton">Log in</div></a>
+		<a href="javascript:void(0)" onclick="closelightbox(); createlightboxregister()" style="text-decoration: none"><div class="regbutton">Register</div></a>
+	</div>
+
 <!--=============Navigation bar section=============-->
 	<div id="header">
 		<div id="navigation">
@@ -175,15 +204,15 @@
 				<a href="uhired.html"><li class="selected">Find Jobs</li></a>
 				<a><li>Review Jobs</li></a>
 
-				<a href="javascript:void(0)" onclick="createlightboxlogin()"><div class="topbutton" id="reg"><li>Post Jobs</li></a>
+				<a href="javascript:void(0)" onclick="createlightboxlogin()"><li>Post Jobs</li></a>
 				<a><li>Ask a Question</li></a>
 			</ul>
 		</div>
 	</div>
 
 <!--=============Job posting list=============-->
-	<div class="maincontent">
-
+<div class="maincontent">
+		
 <!--
 	Consultant job info-->
 		<div id="consultant" class="popupdescription">
@@ -503,12 +532,13 @@
 				<div class="dateposted">Posted on 1/12/14</div>
 			</div>
 		</label>
-
+	
 	</div>
 
 
 <!--=============Registration box remains hidden until these are changed=============-->
 	<div id="fade" class="overlay"></div>
+
 
 </body>
 

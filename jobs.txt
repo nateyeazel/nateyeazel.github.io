@@ -1,0 +1,12 @@
+
+		<div class="workstudy">
+			<div class="title">Technology Associate Consultant</div>
+			<a href="http://www.it.northwestern.edu/" target="_blank"><div class="employer"> &nbsp;(Northwestern University Information Technology)</div></a>
+			<div class="wage">$9 - $10/hour</div>
+		</div>
+
+		<div class="workstudy">
+			<div class="title">Norris Desk Clerk</div>
+			<a href="http://www.norris.northwestern.edu/" target="_blank"><div class="employer"> &nbsp;(Norris Student Center)</div></a>
+			<div class="wage">$9 - $10/hour</div>
+		</div>
