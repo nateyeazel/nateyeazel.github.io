@@ -17,13 +17,20 @@
 	<script src="uhired.js"></script>
 </head>
 
-<body onload="document.addposting.addtitle.focus()">
+<body>
 
 	<a href="uhired.html"><div class ="logo">UHired</div></a>
 
 	<div class = "logout">Thanks for choosing uHired!
 		<a href="uhired.html"><div class="logoutbutton">Log out</div></a></div>
 
+<!--=============Thanks for submitting box=============-->
+	<div id="lightreg" class="popupthankyou">
+		<a href="javascript:void(0)" onclick = "closelightbox();" style="float:right">
+			<img src="images/close.png" alt=""/></a>
+
+		Thank you for submitting a new job posting!
+	</div>
 
 
 <!--=============Filters section=============-->
@@ -134,7 +141,7 @@
 									</td>
 								</tr>
 		</table>
-		<a href="loggedin.html" style="text-decoration: none"><div id="register" class="submit">Submit</div></a>
+		<a href="javascript:void(0)" onclick="createlightboxregister();" style="text-decoration: none"><div id="register" class="submit">Submit</div></a>
 	</div>
 
 <!--=============Registration box remains hidden until these are changed=============-->

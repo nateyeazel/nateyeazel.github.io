@@ -14,9 +14,9 @@ function createlightboxregister() {
 }
 
 function closelightbox() {
+	document.getElementById('fade').style.display='none';
 	document.getElementById('lightreg').style.display='none';
 	document.getElementById('lightlogin').style.display='none';
-	document.getElementById('fade').style.display='none';
 }
 
 function createlightboxlogin() {
@@ -37,6 +37,7 @@ function closeJobDesc(characteristic) {
 
 $(window).click(function(){
   $(".popupdescription").stop().animate({"marginTop": ($(window).scrollTop()) - 15 + "px"});
+  $(".popupthankyou").stop().animate({"marginTop": ($(window).scrollTop()) - 15 + "px"});
 });
 
 
