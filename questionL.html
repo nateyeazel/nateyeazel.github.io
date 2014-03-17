@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>uHired Student Job Search</title>
+
+	<link rel="stylesheet" href="uhired.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Droid+Sans:regular,italic,bold,bolditalic"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:regular,italic,bold,bolditalic"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:regular,italic,bold,bolditalic"/>
+
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="uhired.js"></script>
+</head>
+
+<body>
+
+	<a href="uhired.html"><div class ="logo">UHired</div></a>
+
+	<div class = "login">
+
+		<a href="javascript:void(0)" onclick="createlightboxregister()"><div class="topbutton" id="reg">Register</div></a>
+		<a href="javascript:void(0)" onclick="createlightboxlogin()"><div class="topbutton2" id="reg">Log In</div></a>
+
+	</div>
+
+<!--=============Thanks for submitting box=============-->
+	<div id="thankyou" class="popupthankyou">
+		<a href="javascript:void(0)" onclick = "closelightbox();" style="float:right">
+			<img src="images/close.png" alt=""/></a>
+
+		Thank you for submitting a question!
+	</div>
+
+
+<!--=============Filters section=============-->
+	<div class="filters">
+		<div class="filterhead">Contact Information</div>
+		<div class="category">P: (847) 491-4357</div>
+		<br>
+		<div class="category">E: info@uhired.com</div>
+		<br>
+		<div class="category">A: 1800 Sherman Ave.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evanston, IL 60208</div>
+	</div>
+
+<!--=============Pop up Registration Box when 'Register' is selected=============-->
+	<div id="lightreg" class="popupregcontent">
+		<a href="javascript:void(0)" onclick = "closelightbox()" style="float:right">
+			<img src="images/close.png" alt=""/></a>
+
+		<table alight="center" cellpadding="5" cellspacing="5">
+			<tr>
+				<td colspan="2" class="Title" align="center">Create an Account</td>
+			</tr>
+			<tr>
+				<td class="label">First Name:</td>
+				<td align="center">
+					<input autofocus id="Field1" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Last Name:</td>
+				<td align="center">
+					<input id="Field2" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Email:</td>
+				<td align="center">
+					<input id="Field3" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Username:</td>
+				<td align="center">
+					<input id="Field4" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Password:</td>
+				<td align="center">
+					<input id="Field5" type="password" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Re-type Password:</td>
+				<td align="center">
+					<input id="Field6" type="password" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Student:</td>
+				<td alight="center">
+					<input id="Field7" type="checkbox"/></td>
+			</tr>
+			<tr>
+				<td class="label">Employer:</td>
+				<td alight="center">
+					<input id="Field7" type="checkbox"/></td>
+			</tr>
+
+		</table>
+		<a href="question.html" style="text-decoration: none"><div id="register" class="regbutton">Register</div></a>
+	</div>
+
+<!--=============Pop up Login Box when 'Post' is selected=============-->
+	<div id="lightlogin" class="popuplogincontent">
+		<a href="javascript:void(0)" onclick = "closelightbox()" style="float:right">
+			<img src="images/close.png" alt=""/></a>
+
+		<table alight="center" cellpadding="5" cellspacing="5">
+			<tr>
+				<td colspan="2" class="Title" align="center">Log in to your account</td>
+			</tr>
+			<tr>
+				<td class="label">Username:</td>
+				<td align="center">
+					<input autofocus id="Field1" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Password:</td>
+				<td align="center">
+					<input id="Field2" type="password" size="40"/></td>
+			</tr>
+
+		</table>
+		<a href="question.html" style="text-decoration: none"><div class="regbutton">Log in</div></a>
+		<a href="javascript:void(0)" onclick="closelightbox(); createlightboxregister()"><div class="text" class="last" style="text-align:center; margin-top:10px;">&laquo; Not registered?</div></a>
+	</div>
+
+<!--=============Pop up submission form when 'Submit a Question' is selected=============-->
+	<div id="questionbox" class="popupregcontent">
+		<a href="javascript:void(0)" onclick = "closelightbox()" style="float:right">
+			<img src="images/close.png" alt=""/></a>
+
+		<table alight="center" cellpadding="5" cellspacing="5">
+			<tr>
+				<td colspan="2" class="Title" align="center">Submit a Question</td>
+			</tr>
+			<tr>
+				<td class="label">First Name:</td>
+				<td align="center">
+					<input autofocus id="Field1" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Last Name:</td>
+				<td align="center">
+					<input id="Field2" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Email:</td>
+				<td align="center">
+					<input id="Field3" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Student:</td>
+				<td>
+					<input id="Field7" type="checkbox"/></td>
+			</tr>
+			<tr>
+				<td class="label">Employer:</td>
+				<td>
+					<input id="Field7" type="checkbox"/></td>
+			</tr>
+			<tr>
+				<td class="label">Question:</td>
+				<td>
+					<form><textarea rows="5" cols="30"></textarea></form></td>
+			</tr>
+
+		</table>
+		<a href="javascript:void(0)" onclick="closelightbox(); createlightboxthankyou();" style="text-decoration: none"><div id="register" class="regbutton">Submit</div></a>
+	</div>
+
+<!--=============Navigation bar section=============-->
+	<div id="header">
+		<div id="navigation">
+			<ul>
+				<a href="uhired.html"><li>Find Jobs</li></a>
+				<a href="uhired2.html"><li>Post Jobs</li></a>
+				<a><li class="selected">Ask a Question</li></a>
+			</ul>
+		</div>
+	</div>
+
+
+<!--=============FAQ section=============-->
+
+	<a href="javascript:void(0)" onclick="createlightboxquestion()" style="text-decoration: none;"><div id="register" class="regbutton" style="font-size: 25px; margin-left:19%; height: 30px;width:250px">Submit a Question</div></a>
+
+	<div class="maincontent">
+
+		<div class="Title" style="text-align:left; margin-left:1%; margin-top:25px;">Frequently Asked Questions</div>
+
+		<div class="question">
+			<div class="title">Do I need to be a Northwestern student to be able to apply for jobs?</div>
+			<div class="employer"></div>
+			<div class="wage"></div>
+			<div class="details">
+				<div class="first"></div>
+				Yes and no. Certain employers have selected to use our common application, which requires Northwestern credentials to access. Some other jobs will simply redirect you to the page of their corresponding application process.
+			</div>
+			<div class="dateposted"></div>
+		</div>          
+
+		<div class="question">
+			<div class="title">As a student, do I have to register for an account on uHired before I can apply to a job?</div>
+			<div class="employer"></div>
+			<div class="wage"></div>
+			<div class="details">
+				<div class="first"></div>
+				No! We understand that college students are overwhelmed with homework and other duties, so we want to keep the process as quick and painless as possible. However, there are many benefits from registering for an account, including profile-based jobs suggestions and regular email updates about new listings.
+			</div>
+			<div class="dateposted"></div>
+		</div>  	                                                    
+	 
+	 	<div class="question">
+			<div class="title">As a student, how can I follow up with any of my job applications?</div>
+			<div class="employer"></div>
+			<div class="wage"></div>
+			<div class="details">
+				<div class="first"></div>
+				We recommend that you contact any employers directly for an update on your application. For each job listing on uHired, the listed employer name links to the employer's website, making it as easy as possible for you to contact the relevant employer.
+			</div>
+			<div class="dateposted"></div>
+		</div> 
+
+	 	<div class="question">
+			<div class="title">As an employer, how can I post a job on your site?</div>
+			<div class="employer"></div>
+			<div class="wage"></div>
+			<div class="details">
+				<div class="first"></div>
+				It is easy! First, if you have not done so, register your account. Then, while you are logged in, you should click "Post Jobs" and fill in the appropriate information. The job will be posted as soon as you click "Submit". However, we will be regularly reviewing the active job postings to eliminate any spam.
+			</div>
+			<div class="dateposted"></div>
+		</div>   
+
+	 	<div class="question">
+			<div class="title">Can we get a replicate of your website for our University?</div>
+			<div class="employer"></div>
+			<div class="wage"></div>
+			<div class="details">
+				<div class="first"></div>
+				Absolutely! We are always looking for ways to expand uHired to other Universities. As part of the partnering process, we do charge a negotiable monthly fee and one-time signup fee. In return, you will receive special customizations and website analytics. We believe in providing a seamless experience for our customers and partners, and we regularly tweak our website based on your suggestions for best possible performance.
+			</div>
+			<div class="dateposted"></div>
+		</div>  
+
+		<div class="question">
+			<div class="title">Will your website work on my mobile device?</div>
+			<div class="employer"></div>
+			<div class="wage"></div>
+			<div class="details">
+				<div class="first"></div>
+				At this time, we have not released an official mobile version or app of uHired, though its implementation is in progress. Nevertheless, our website should correctly on any mobile device, including smart phones and tablets. If you experience any errors while using uHired on a mobile device, please report it to us so we can correct the problem.
+			</div>
+			<div class="dateposted"></div>
+		</div>  
+	</div>
+
+
+	<a href="javascript:void(0)" onclick="createlightboxquestion()" style="text-decoration: none;"><div id="register" class="regbutton" style="font-size: 25px; margin-left:16%; height: 30px;width:250px">Submit a Question</div></a>
+
+	
+
+<!--=============Registration box remains hidden until these are changed=============-->
+	<div id="fade" class="overlay"></div>
+
+</body>
+</html>

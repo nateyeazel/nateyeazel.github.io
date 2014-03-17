@@ -17,14 +17,95 @@
 	<script src="uhired.js"></script>
 </head>
 
-<body onload="document.registereduser.username.focus()">
+<body>
 
-	<div class ="logo"><a href="loggedin.html">UHired</a></div>
+	<div class ="logo"><a href="uhired.html">UHired</a>	</div>
 
-	<div class = "logout">
-		<a href="uhired.html"><div class="logoutbutton">Log out</div></a></div>
+<!--=============Log In or Register Option at top=============-->
+	<div class = "login">
+		<a href="javascript:void(0)" onclick="createlightboxregister()"><div class="topbutton" id="reg">Register</div></a>
+		<a href="javascript:void(0)" onclick="createlightboxlogin()"><div class="topbutton2" id="reg">Log In</div></a>
 
+	</div>
 
+<!--=============Pop up Registration Box when 'Register' is selected=============-->
+	<div id="lightreg" class="popupregcontent">
+		<a href="uhired.html" style="float:right">
+			<img src="images/close.png" alt=""/></a>
+
+		<table alight="center" cellpadding="5" cellspacing="5">
+			<tr>
+				<td colspan="2" class="Title" align="center">Create an Account</td>
+			</tr>
+			<tr>
+				<td class="label">First Name:</td>
+				<td align="center">
+					<input id="Field1" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Last Name:</td>
+				<td align="center">
+					<input id="Field2" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Email:</td>
+				<td align="center">
+					<input id="Field3" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Username:</td>
+				<td align="center">
+					<input id="Field4" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Password:</td>
+				<td align="center">
+					<input id="Field5" type="password" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Re-type Password:</td>
+				<td align="center">
+					<input id="Field6" type="password" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Student:</td>
+				<td alight="center">
+					<input id="Field7" type="checkbox"/></td>
+			</tr>
+			<tr>
+				<td class="label">Employer:</td>
+				<td alight="center">
+					<input id="Field7" type="checkbox"/></td>
+			</tr>
+
+		</table>
+		<a href="post.html" style="text-decoration: none"><div id="register" class="regbutton">Register</div></a>
+	</div>
+
+<!--=============Pop up Login Box when 'Post' is selected=============-->
+	<div id="lightlogin" class="popuplogincontent" style="display:block">
+		<a href="uhired.html" style="float:right">
+			<img src="images/close.png" alt=""/></a>
+
+		<table alight="center" cellpadding="5" cellspacing="5">
+			<tr>
+				<td colspan="2" class="Title" align="center">Log in to your account</td>
+			</tr>
+			<tr>
+				<td class="label">Username:</td>
+				<td align="center">
+					<input id="Field1" type="text" size="40"/></td>
+			</tr>
+			<tr>
+				<td class="label">Password:</td>
+				<td align="center">
+					<input id="Field2" type="password" size="40"/></td>
+			</tr>
+
+		</table>
+		<a href="post.html" style="text-decoration: none"><div class="regbutton">Log in</div></a>
+		<a href="javascript:void(0)" onclick="closelightbox(); createlightboxregister()"><div class="text" class="last" style="text-align:center; margin-top:10px;">&laquo; Not registered?</div></a>
+	</div>
 
 <!--=============Filters section=============-->
 	<div class="filters">
@@ -90,16 +171,15 @@
 	<div id="header">
 		<div id="navigation">
 			<ul>
-				<a><li class="selected">Find Jobs</li></a>
-				<a href="post.html"><li>Post Jobs</li></a>
-				<a href="question.html"><li>Ask a Question</li></a>
+				<a href="uhired.html"><li>Find Jobs</li></a>
+				<a class="selected"><li>Post Jobs</li></a>
+				<a href="questionL.html"><li>Ask a Question</li></a>
 			</ul>
 		</div>
 	</div>
 
-
 <!--=============Job posting list=============-->
-<div class="maincontent">
+	<div class="maincontent">
 
 <!--
 	Consultant job info-->
@@ -431,8 +511,9 @@
 	
 	</div>
 
+
 <!--=============Registration box remains hidden until these are changed=============-->
-	<div id="fade" class="overlay"></div>
+	<div id="fade" class="overlay" style="display:block"></div>
 
 </body>
 

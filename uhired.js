@@ -17,6 +17,8 @@ function closelightbox() {
 	document.getElementById('fade').style.display='none';
 	document.getElementById('lightreg').style.display='none';
 	document.getElementById('lightlogin').style.display='none';
+	document.getElementById('thankyou').style.display='none';
+	document.getElementById('questionbox').style.display='none';
 }
 
 function createlightboxlogin() {
@@ -24,6 +26,15 @@ function createlightboxlogin() {
 	document.getElementById('fade').style.display='block';
 }
 
+function createlightboxthankyou() {
+	document.getElementById('thankyou').style.display='block';
+	document.getElementById('fade').style.display='block';
+}
+
+function createlightboxquestion() {
+	document.getElementById('questionbox').style.display='block';
+	document.getElementById('fade').style.display='block';
+}
 
 function createJobDesc(characteristic) {
 	document.getElementById(characteristic).style.display='block';
@@ -36,14 +47,15 @@ function closeJobDesc(characteristic) {
 }
 
 $(window).click(function(){
-  $(".popupdescription").stop().animate({"marginTop": ($(window).scrollTop()) - 15 + "px"});
-  $(".popupthankyou").stop().animate({"marginTop": ($(window).scrollTop()) - 15 + "px"});
+  $(".popupdescription").stop().animate({"marginTop": ($(window).scrollTop()) - 100 + "px"});
+  $(".popupregcontent").stop().animate({"marginTop": ($(window).scrollTop()) - 100 + "px"});
+  $(".popuplogincontent").stop().animate({"marginTop": ($(window).scrollTop()) - 100 + "px"});
+  $(".popupthankyou").stop().animate({"marginTop": ($(window).scrollTop()) - 100 + "px"});
 });
 
 
 function toggleresults(c) {
-	document.maincontent.getElementsByClassName('ws').style.display='none';
-	log('Hello world');
+	document.maincontent.getElementsByClassName(c).style.display='none';
 }
 
 function getElementsByClassName(classname) {
@@ -62,12 +74,12 @@ function addFilter(classname, node) {
 
 	if(document.getElementById(node).checked) {
 		for(i in elements) {
-			elements[i].style.display = "none";
+			elements[i].style.display = "block";
 		};
 	}
 	else {
 		for(i in elements) {
-			elements[i].style.display = "block";
+			elements[i].style.display = "none";
 		};
 	}
 }
@@ -78,12 +90,12 @@ function addFilter2(classname, node) {
 
 	if(document.getElementById(node).checked) {
 		for(i in elements) {
-			elements[i].style.display = "block";
+			elements[i].style.display = "none";
 		};
 	}
 	else {
 		for(i in elements) {
-			elements[i].style.display = "none";
+			elements[i].style.display = "block";
 		};
 	}
 }
